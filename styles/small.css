@@ -1,0 +1,60 @@
+body {
+  min-width: 375px;
+}
+
+.nav-container {
+  background:url("../images/logo-scarfcat-banner.png");
+  background-repeat: no-repeat;
+  background-color: #3d7ece;
+}
+
+.media {
+  display: none;
+}
+
+.col-nav {
+  margin-top: 4px;
+}
+
+.cart-items-wrapper {
+  height: 100px;
+  padding-right:0;
+  margin-bottom:10px
+}
+
+.cart-img {
+  max-width: 90px;
+}
+
+
+/*.cart-item:nth-last-child(n+2) {
+  border-right-style:none;
+  margin:auto;
+}*/
+
+.trash-button,
+.cart-quantity {
+  display: none;
+  border-top: white;
+}
+
+.cart-footer {
+  padding: 0;
+  margin: 0;
+}
+
+.cart-items-total, .cart-items-qty  {
+  padding-top:8px;
+}
+
+.cart-footer-items-label, .cart-footer-total-label {
+  display:none;
+}
+
+.cart-footer-items-qty, .cart-footer-total {  
+  font-size:1rem;
+}
+
+.cart-fig-caption {
+  visibility:hidden;
+}

@@ -1,0 +1,64 @@
+  * {
+    box-sizing: border-box;
+  }
+
+  .overlayContainer {
+    position: relative;
+    width: 50%;
+    /* max-width: 300px;*/
+    /*  border-style: solid;
+    border-radius: 4px;
+    border-width: 2px;*/
+    width: 25rem;
+    width: 100%;
+    padding: 1rem;
+    /*   border-width: 1px;
+    border-style: solid;
+    border-radius: 4px;*/
+   /*margin:auto;*/
+    bottom:0;
+    left:0;
+  }
+
+  .image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .purchaseOverlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    /*   background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);*/
+    background: rgb(216, 179, 84);
+    background: rgba(216, 179, 84, 1);
+    background: rgb(61, 126, 206);
+    background: rgba(61, 126, 206, 0.75);
+    /* blue see-through */
+    color: #f1f1f1;
+    width: 100%;
+    transition: .5s ease;
+    opacity: 0;
+    color: white;
+    font-size: 20px;
+    padding: 30px;
+    
+    
+    text-align: center;
+    
+
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+
+  .overlayContainer:hover .purchaseOverlay {
+    opacity: 1;
+  }
+
+  .buyMeIcon {
+    color: white;
+    cursor: pointer;
+  }
