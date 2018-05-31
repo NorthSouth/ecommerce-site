@@ -1,4 +1,4 @@
-#ecommerce project
+# ecommerce project
 
 Current version includes:
   1. the ability to add/remove items from the cart
@@ -13,7 +13,7 @@ Current version includes:
 
 
 =======================================================
-#Site Audience Classification Analysis
+# Site Audience Classification Analysis
 
 The nature/pricing of the products (at least in the Scarves section) suggest that this is a niche boutique e-store.
 Directed primarily towards young, trendy, fashion-and-socially conscious urban professionals, 25-40 and predominantly women, living in areas where the climate supports warmer clothing (e.g. probably not Florida or Arizona). 
@@ -23,7 +23,7 @@ With a traffic flow that is defined by seasonal purchases, site access will pred
 In keeping with the target demographic, the expectation is that the site will be accessed on late-model devices with broadband access. 
 Additionally, site consumers will have an eye for quality and color, so product images should be kept large and at higher-than-standard resolution to best make use of high-end monitors to showcase the items.
 
-#Testing
+# Testing
 
 responsive.designchecker.com:  
 responds well at all device and screen sizes except the very smallest (some side-to-side scrolling)
