@@ -32,7 +32,6 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
 
-
   <!--  Personal Font Awesome CDN link here  -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -77,11 +76,7 @@
               </button>
               </nav>
             </div>
-            <!--<div class="col-sm-3">
-              <a href="#" id="shopping-cart">
-                <i class="fa fa-shopping-cart"></i>
-              </a>
-            </div>-->
+        
           </div>
 
           <div class="row px-2 pt-2 pb-2 " id="nav-row">
@@ -91,8 +86,6 @@
                   <!-- <div class="cart-hidden p-4">-->
                   <div class="cart-hidden p-1">
                     <div class="cart-wrapper">
-                      <!--<h4 class="text-white">Collapsed content</h4>
-                      <span class="text-muted">Toggleable via the navbar brand.</span>-->
                       <div class="cart-content-wrapper">
                         <div class="d-flex flex-nowrap" id="cart-content-row">
                        <!--   <div class="cart-footer" >-->
@@ -144,8 +137,8 @@
     </header>
 
 
+    <div id="app-index">
     <main>
-
       <div class="content-container">
         <div class="row px-2 pt-2 pb-2 " id="content-row">
           <!--display tools-->
@@ -158,7 +151,7 @@
                   <option value="material">Material</option>
                   <option value="price">Price</option>
                 </select>
-              <button type="submit" value="submit" class="btn btn-primary btn-block mt-2" style="background-color: #3d7ece;" onclick="filterProducts();">Start</button>
+              <button type="submit" value="submit" class="btn btn-primary btn-block mt-2" style="background-color: #3d7ece;" v-on:click.prevent="filterItems(this)">Sort</button>
             </form>
           </div>
 
@@ -166,16 +159,28 @@
           <div class="item-container col-lg-9 col-md-8">
             <h2>Scarves</h2>
             <div class="d-flex flex-wrap p-2 justify-content-center" id="item-grid">
-
-              <!--     Auto-populated item list goes here     -->
-
+              
+              <div v-for="scarf in scarves" class="item-wrapper" v-bind:id="itemWrapper(scarf)">
+                <div class="item-unit" v-bind:id="itemNum(scarf)">
+                  <h3>{{scarf.name}}</h3>
+                    <img v-bind:src="srcI(scarf)" v-bind:alt="nameI(scarf)">
+                    <p class="product-description">{{scarf.description}}</p>
+                    <p class="product-price">{{scarf.price}}</p>
+                </div>
+                <div class="overlayContainer" v-bind:id="overlayContainer(scarf)">
+                  <div class="purchaseOverlay" v-bind:id="overlayPurchase(scarf)">
+                    <i class="fa fa-shopping-cart buyMeIcon" v-bind:id="nameI(scarf)" onclick="addItemToCart(this.id);"></i>
+                  </div>
+                </div>
+              </div>
+          
             </div>
           </div>
         </div>
       </div>
-
     </main>
 
+    </div>
 
 
     <footer id="productsFooter">
@@ -202,8 +207,10 @@
 
     <!--   javascript files   -->
 
-    <script src="js/script.js"></script>
-    <script src="js/script-unsorted.js"></script>
+   <!-- <script src="js/script.js"></script>
+    <script src="js/script-unsorted.js"></script>-->
+    <script src="js/vue-component.js"></script>
+    <script src="js/main-vue.js"></script>
     <script src="js/main.js"></script>
     <script src="js/cart.js"></script>
     <script src="js/signup.js"></script>

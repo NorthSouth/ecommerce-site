@@ -1,7 +1,19 @@
-# ecommerce-week8
-HTML 200 ecommerce site
+#ecommerce project
 
-Site Audience Classification Analysis
+Current version includes:
+  1. the ability to add/remove items from the cart
+  2. a visual indicator above the cart icon to represent the number of items in the cart
+  3. a tracker for the cost of all items in the cart
+  4. a functional 'purchase' button that for now links to a dummy page (the button is inactive when no items are in the cart)
+  5. the ability to scroll through images in the cart
+  6. responsive layout for the cart
+  7. an on-hover feature to add products to the cart
+  8. main product listings re-factored using Vue.js
+  9. product sort re-factored using Vue.js
+
+
+=======================================================
+#Site Audience Classification Analysis
 
 The nature/pricing of the products (at least in the Scarves section) suggest that this is a niche boutique e-store.
 Directed primarily towards young, trendy, fashion-and-socially conscious urban professionals, 25-40 and predominantly women, living in areas where the climate supports warmer clothing (e.g. probably not Florida or Arizona). 
@@ -11,7 +23,7 @@ With a traffic flow that is defined by seasonal purchases, site access will pred
 In keeping with the target demographic, the expectation is that the site will be accessed on late-model devices with broadband access. 
 Additionally, site consumers will have an eye for quality and color, so product images should be kept large and at higher-than-standard resolution to best make use of high-end monitors to showcase the items.
 
-Testing
+#Testing
 
 responsive.designchecker.com:  
 responds well at all device and screen sizes except the very smallest (some side-to-side scrolling)
@@ -35,13 +47,3 @@ Will continue to build out functionality of product cart to add swipe-enabled fu
 Additionally,  will look into image compression as per Google analytic results to decrease page load times.
 
 
-=======================================================
-
-Current version includes:
-1. the ability to add/remove items from the cart
-2. a visual indicator above the cart icon to represent the number of items in the cart
-3. a tracker for the cost of all items in the cart
-4. a functional 'purchase' button that for now links to a dummy page (the button is inactive when no items are in the cart)
-5. the ability to scroll through images in the cart
-6. responsive layout for the cart
-7. an on-hover feature to add products to the cart

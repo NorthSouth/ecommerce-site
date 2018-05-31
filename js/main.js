@@ -395,4 +395,4 @@ var compressedCartList;
 
 
 
-prepProducts(productsScarves, sortedChoice);
+/*prepProducts(productsScarves, sortedChoice);*/

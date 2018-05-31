@@ -199,11 +199,16 @@ function createCartItem(itemIndex, imgSource, imgTitle, productQuantity) {
   node.setAttribute("class", "cart-qty");
   node.setAttribute("id", "item-" + itemIndex + "-qty");
 
-  node = document.createElement("i");
+  /*node = document.createElement("i");*/
+  node = document.createElement("img");
   document.getElementById("cart-figcaption-" + itemIndex).appendChild(node);
   element = document.getElementById("cart-figcaption-" + itemIndex);
   node = element.lastChild;
-  node.setAttribute("class", "fa fa-trash trash-button");
+  /*node.setAttribute("class", "fa fa-trash trash-button");*/
+  node.setAttribute("class", "trash-button");
+  node.setAttribute("src","images/recycleBin.svg");
+  node.setAttribute("height","20");
+  node.setAttribute("alt","recycleBin");
   node.setAttribute("id", imgTitle);
   node.setAttribute("onclick", "removeItemFromCart(this.id);");
 }
@@ -358,19 +363,26 @@ function removeItemFromCart(itemName) {
   var itemPrice;
   var newItemTotal;
   
-   var cartItemIndex = findCartItemIndex(itemIndex);
+  var cartItemIndex = findCartItemIndex(itemIndex);
   
   if (cartItemIndex != -1 ){
     itemPrice=productsScarvesOld[itemIndex].price;
     itemQty=cartItemList[cartItemIndex][0].quantity;
     
-    newItemTotal=fixTotal(cartItemTotal-(itemQty*itemPrice));
+    itemQty--;
+    
+   /* newItemTotal=fixTotal(cartItemTotal-(itemQty*itemPrice));*/
+    newItemTotal=fixTotal(cartItemTotal-itemPrice);
     cartItemTotal=newItemTotal;
     
-    numCartItems-=itemQty;
+    /*numCartItems-=itemQty;*/
+    numCartItems--;
     
-    cartItemList.splice(cartItemIndex,1);
-    
+    if (itemQty == 0) {
+      cartItemList.splice(cartItemIndex,1);  // if item count goes to zero remove     
+    }    else {
+      cartItemList[cartItemIndex][0].quantity=itemQty; // update cart list with new qty
+    }
   
     buildCart();
     modifyCartIcon();
