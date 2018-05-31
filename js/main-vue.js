@@ -51,7 +51,7 @@ var appIndex = new Vue({
           break;
         default:
           {
-            alert("Please select how you'd like to select our products.");
+            alert("Please select how you'd like to view our products.");
           }
       }
     }
