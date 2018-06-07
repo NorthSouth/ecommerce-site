@@ -2,7 +2,7 @@
 
 The project was intended to have a minimally-styled layout in order to focus on aspects of an ecommerce site: JSON-sourced product listings, product cart, and product sorting.
 
-Base layout was established with HTML and CSS, with product listing generated with Vue.js (from a JSON-formatted hash of products). Cart functionality was provided with JavaScript. Product sorting was accomplished with additional use of Vue.js.
+Base layout was established with HTML and CSS, with product listings generated with Vue.js (from a JSON-formatted hash of products). Cart functionality was provided with JavaScript. Product sorting was accomplished with additional use of Vue.js.
 
 #  Current version includes:
   1. the ability to add/remove items from the cart
