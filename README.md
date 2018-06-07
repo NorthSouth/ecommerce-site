@@ -1,6 +1,10 @@
-# ecommerce project
+# Overview
 
-Current version includes:
+The project was intended to have a minimally-styled layout in order to focus on aspects of an ecommerce site: JSON-sourced product listings, product cart, and product sorting.
+
+Base layout was established with HTML and CSS, with product listing generated with Vue.js (from a JSON-formatted hash of products). Cart functionality was provided with JavaScript. Product sorting was accomplished with additional use of Vue.js.
+
+#  Current version includes:
   1. the ability to add/remove items from the cart
   2. a visual indicator above the cart icon to represent the number of items in the cart
   3. a tracker for the cost of all items in the cart
